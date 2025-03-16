@@ -36,9 +36,15 @@ function Books() {
 
   useEffect(() => {
     async function fetchData() {
-      const data = await getBooksData(page);
-      setBooks(data);
-      console.log(data);
+      setLoading(true);
+      try {
+        const data = await getBooksData(page);
+        setBooks(data);
+      } catch (error) {
+        console.error("Error fetching books:", error);
+      } finally {
+        setLoading(false);
+      }
     }
     fetchData();
   }, [page]);
@@ -56,8 +62,7 @@ function Books() {
           possible.
         </p>
         <p className="text-gray-700 mb-8">
-          Our team is passionate about what we do and we strive to exceed your
-          expectations.
+          Here you find list of available books.
         </p>
       </div>
       <div className="columns-1 sm:columns-2 lg:columns-3 gap-6 p-8">
@@ -69,14 +74,22 @@ function Books() {
               className="break-inside-avoid bg-white p-6 mb-6 rounded-lg shadow-md"
             >
               <h2 className="text-xl font-semibold mb-2">{book.title}</h2>
-              <p className="text-gray-700 mb-4">{book.author}</p>
-              <p className="text-gray-700">{book.description}</p>
+              <p className="text-gray-700 mb-4">Written by {book.author}</p>
+              <p className="text-gray-700 mb-4">Category : {book.category}</p>
+              <p className="text-gray-700 mb-4">Published by {book.publisher}</p>
+              <p className="text-gray-700 mb-4">Price is {book.price_starting_with}</p>
+              <p className="text-gray-700 mb-4">Published in {book.publish_date_year}</p>
+              <p className="text-gray-700">
+                {book.description !== "nan"
+                  ? book.description
+                  : "Description not available"}
+              </p>
             </div>
           ))}
       </div>
-      <div className="container flex justify-center items-center my-3">
+      <div className="container bg-secondary flex justify-center items-center mx-auto py-2 my-3">
         <button
-          className="bg-blue-500 text-white font-semibold px-4 py-2 rounded-lg shadow-md hover:bg-blue-600"
+          className="bg-neutral-100 text-secondary font-semibold px-4 py-2 rounded-lg shadow-md hover:bg-blue-600"
           onClick={goToPreviousPage}
         >
           Previous

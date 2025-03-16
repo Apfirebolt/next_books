@@ -20,8 +20,8 @@ const BooksPage = () => {
                     Whether you are looking for fiction, non-fiction, or educational books, we have something for everyone.
                 </p>
                 <div className="flex justify-center items-center my-3">
-                    <button className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded' onClick={increase}>Increase</button>
-                    <button className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mx-2' onClick={decrease}>Decrease</button>
+                    <button className='bg-primary hover:bg-secondary text-white font-bold py-2 px-4 rounded' onClick={increase}>Increase</button>
+                    <button className='bg-warning hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mx-2' onClick={decrease}>Decrease</button>
                 </div>
             </div>
         </div>

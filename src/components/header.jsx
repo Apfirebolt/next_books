@@ -2,7 +2,7 @@ import Link from 'next/link';
 
 const Header = () => {
   return (
-    <header className="bg-blue-500 p-4">
+    <header className="bg-primary p-4">
       <nav className="container mx-auto flex justify-between items-center">
         <div className="text-white text-lg font-bold">Books App</div>
         <ul className="flex space-x-4">
