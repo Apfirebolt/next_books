@@ -1,7 +1,8 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { getBooksData } from "../actions/company";
+import { getBooksData } from "../actions/books";
+import Link from "next/link";
 import { motion } from "framer-motion";
 import Loader from "./loader";
 
@@ -90,6 +91,9 @@ return (
                                 ? book.description
                                 : "Description not available"}
                         </p>
+                        <Link href={`/books/${book.id}`} className="text-secondary font-bold my-3 text-center text-lg block bg-sky-100 px-2 py-1 rounded-lg">
+                            View Details
+                        </Link>
                     </div>
                 ))}
         </div>

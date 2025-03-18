@@ -10,6 +10,8 @@
 
 This project is a Next.js application that serves as a database for books. It allows users to view book entries from the API https://softgenie.org/api/books. The application is built using Next.js for server-side rendering and optimized performance. It uses Tailwind CSS for styling and Framer motion for animated components such as loaders
 
+At the time of writing this, this application is available to be tested at https://next-books-lovat.vercel.app
+
 ## Features
 
 - View a list of books
