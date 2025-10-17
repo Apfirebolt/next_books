@@ -17,6 +17,11 @@ const Header = () => {
             </Link>
           </li>
           <li>
+            <Link href="/login" className="text-white hover:text-gray-200" passHref>
+              Login
+            </Link>
+          </li>
+          <li>
             <Link href="/books" className="text-white hover:text-gray-200" passHref>
               Books
             </Link>

@@ -33,6 +33,16 @@ Before you begin, ensure you have met the following requirements:
 - You have installed Node.js and npm.
 - You have a basic understanding of JavaScript and React.
 
+## Enable Google Auth
+
+Create an env file with the following contents :-
+
+```
+NEXTAUTH_SECRET="your_secret_key"
+GOOGLE_CLIENT_ID="your_google_client_id"
+GOOGLE_CLIENT_SECRET="your_google_secret"
+```
+
 ## Installation
 
 To install the project, follow these steps:
