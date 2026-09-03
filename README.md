@@ -73,6 +73,10 @@ To use the application, follow these steps:
 1. Open your browser and navigate to `http://localhost:3000`.
 2. Browse the list of games.
 
+## Updates
+
+- October 22, 2025 : Upgraded to Next 16
+
 ## Screenshots
 
 This is the Books page
