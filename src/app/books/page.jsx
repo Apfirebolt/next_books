@@ -2,7 +2,7 @@
 
 import Books from "@/components/books";
 
-async function AboutPage() {
+async function BooksPage() {
   
   return (
     <div className="min-h-screen bg-gray-100">
@@ -11,4 +11,4 @@ async function AboutPage() {
   );
 }
 
-export default AboutPage;
+export default BooksPage;
